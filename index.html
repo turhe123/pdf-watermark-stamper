@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO:START — the builder rewrites title / description / keywords for search (see CLAUDE.md) -->
+  <title>Add Watermark to PDF – Free, Private, No Upload Needed</title>
+  <meta name="description" content="Stamp CONFIDENTIAL, DRAFT or your logo on PDF pages in your browser. Diagonal or tiled text or image watermark, page ranges, no upload, no limits.">
+  <meta name="keywords" content="add watermark to pdf, pdf watermark online free, stamp confidential on pdf, watermark pdf with image, draft watermark pdf, diagonal watermark pdf, logo watermark pdf, private pdf watermark">
+  <!-- SEO:END -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0f14" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://turhe123.github.io/pdf-watermark-stamper/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PDF Watermark Stamper – Free, Private, In Your Browser">
+  <meta property="og:description" content="Add a text or image watermark like CONFIDENTIAL to every PDF page in your browser, with no upload. Free and open source, nothing is uploaded, works offline.">
+  <meta property="og:url" content="https://turhe123.github.io/pdf-watermark-stamper/">
+  <meta property="og:image" content="https://turhe123.github.io/pdf-watermark-stamper/docs/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="PDF Watermark Stamper">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PDF Watermark Stamper – Free, Private, In Your Browser">
+  <meta name="twitter:description" content="Add a text or image watermark like CONFIDENTIAL to every PDF page in your browser, with no upload. Free and open source, nothing is uploaded, works offline.">
+  <meta name="twitter:image" content="https://turhe123.github.io/pdf-watermark-stamper/docs/og.png">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PDF Watermark Stamper",
+    "alternateName": "PDF Watermark Stamper – Free, Private, In Your Browser",
+    "description": "Add a text or image watermark like CONFIDENTIAL to every PDF page in your browser, with no upload. Free and open source, nothing is uploaded, works offline.",
+    "url": "https://turhe123.github.io/pdf-watermark-stamper/",
+    "image": "https://turhe123.github.io/pdf-watermark-stamper/docs/og.png",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript. Works offline after the first visit.",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "license": "https://opensource.org/licenses/MIT",
+    "softwareVersion": "1.0.0",
+    "author": { "@type": "Person", "name": "Or Davidai Bachar", "url": "https://github.com/turhe123" },
+    "sameAs": ["https://github.com/turhe123/pdf-watermark-stamper"]
+  }
+  </script>
+  <script src="vendor/pdf-lib/pdf-lib.min.js" defer></script>
+  <!-- Page views are counted with GoatCounter: no cookies, no personal data, open source. -->
+  <script data-goatcounter="https://turhe123.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#tool">Skip to the tool</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="./" aria-label="PDF Watermark Stamper home">
+        <img class="brand__icon" src="icon.svg" alt="" width="28" height="28">
+        <span class="brand__name">PDF Watermark Stamper</span>
+      </a>
+      <nav class="site-nav" aria-label="Page">
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/turhe123/pdf-watermark-stamper" rel="noopener">GitHub</a>
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener" class="site-nav__more">More tools</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <!-- HERO:START — the builder may refine the headline and promise; keep the trust badges -->
+      <h1 class="hero__title">PDF Watermark Stamper</h1>
+      <p class="hero__lead">Add a text or image watermark like CONFIDENTIAL to every PDF page in your browser, with no upload.</p>
+      <!-- HERO:END -->
+      <ul class="badges" aria-label="Why this tool is safe to use">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Runs in your browser, files never leave your device</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Free, open source, no account, no ads</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Works offline after the first visit</li>
+      </ul>
+    </section>
+
+    <section class="container" id="tool" aria-labelledby="tool-title">
+      <div class="tool-card">
+        <!-- TOOL:START — the builder replaces everything between these markers with the real tool UI -->
+        <h2 id="tool-title" class="visually-hidden">Add a watermark to a PDF</h2>
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose a PDF or drop it here">
+          <label class="visually-hidden" for="file-input">Choose a PDF</label>
+          <input class="dropzone__input" id="file-input" type="file" accept=".pdf,application/pdf" aria-describedby="dropzone-hint">
+          <svg class="dropzone__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="dropzone__title" id="dropzone-title">Drop a PDF here or <span class="link">choose a PDF</span></p>
+          <p class="dropzone__hint" id="dropzone-hint">Nothing is uploaded. Everything happens on this device.</p>
+        </div>
+        <div class="wm-empty" id="empty-state">
+          <p><strong>Your document stays on this device.</strong> The PDF is opened and stamped by your browser, so contracts, reports and drafts are never sent to a server. Pick a PDF, choose a text like CONFIDENTIAL or a PNG or JPG logo, check the preview and download the stamped copy.</p>
+        </div>
+
+        <div class="wm" id="workspace" hidden>
+          <div class="wm__controls">
+            <fieldset class="wm-seg">
+              <legend class="field__label">Watermark type</legend>
+              <label class="wm-seg__opt"><input type="radio" name="mode" id="mode-text" value="text" checked><span>Text</span></label>
+              <label class="wm-seg__opt"><input type="radio" name="mode" id="mode-image" value="image"><span>Image</span></label>
+            </fieldset>
+
+            <div class="wm-group" id="text-opts">
+              <div class="field wm-span">
+                <label for="wm-text">Watermark text</label>
+                <input type="text" id="wm-text" value="CONFIDENTIAL" maxlength="120" autocomplete="off" spellcheck="false" aria-describedby="wm-text-hint">
+                <span class="field__hint" id="wm-text-hint">Press Enter to refresh the preview.</span>
+              </div>
+              <div class="alert wm-span" id="latin-warning" hidden>
+                <p>The standard PDF fonts only cover Latin letters, so some of these characters cannot be stamped as text. Turn the text into an image instead: it keeps every character and works the same way.</p>
+                <button type="button" class="btn btn--small" id="text-to-image">Use this text as an image</button>
+              </div>
+              <div class="field">
+                <label for="wm-font">Font</label>
+                <select id="wm-font">
+                  <option value="helvetica" selected>Helvetica Bold</option>
+                  <option value="times">Times Bold</option>
+                  <option value="courier">Courier Bold</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="wm-size">Font size (pt)</label>
+                <input type="number" id="wm-size" value="64" min="6" max="400" step="1" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="wm-color">Color</label>
+                <input type="color" id="wm-color" value="#dc2626">
+              </div>
+            </div>
+
+            <div class="wm-group" id="image-opts" hidden>
+              <div class="field wm-span">
+                <label for="wm-image">PNG or JPG image</label>
+                <input type="file" id="wm-image" accept="image/png,image/jpeg,.png,.jpg,.jpeg" aria-describedby="wm-image-info">
+                <span class="field__hint" id="wm-image-info">Transparent PNG logos keep their transparency.</span>
+              </div>
+              <div class="field wm-span">
+                <label for="wm-scale">Image width: <output id="wm-scale-out" for="wm-scale">40%</output> of the page</label>
+                <input type="range" id="wm-scale" min="5" max="100" step="1" value="40">
+              </div>
+            </div>
+
+            <div class="wm-group">
+              <div class="field">
+                <label for="wm-opacity">Opacity: <output id="wm-opacity-out" for="wm-opacity">25%</output></label>
+                <input type="range" id="wm-opacity" min="5" max="100" step="1" value="25">
+              </div>
+              <div class="field">
+                <label for="wm-rotation">Rotation: <output id="wm-rotation-out" for="wm-rotation">45°</output></label>
+                <input type="range" id="wm-rotation" min="-180" max="180" step="1" value="45">
+              </div>
+              <div class="field">
+                <label for="wm-position">Position</label>
+                <select id="wm-position">
+                  <option value="center" selected>Center</option>
+                  <option value="tiled">Tiled</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="wm-layer">Layer</label>
+                <select id="wm-layer">
+                  <option value="over" selected>Over content</option>
+                  <option value="under">Under content</option>
+                </select>
+              </div>
+              <div class="field wm-span">
+                <label for="wm-pages">Pages</label>
+                <input type="text" id="wm-pages" placeholder="All pages, or e.g. 2-3, 5" autocomplete="off" aria-describedby="wm-pages-hint">
+                <span class="field__hint" id="wm-pages-hint">All pages</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn--primary btn--block" id="apply">Apply and download</button>
+          </div>
+
+          <div class="wm__preview">
+            <div class="preview wm-canvas-wrap">
+              <canvas id="preview" width="400" height="520" role="img" aria-label="Preview of the watermark on the page"></canvas>
+            </div>
+            <div class="row wm-stepper">
+              <button type="button" class="btn btn--small" id="prev-page" aria-label="Previous page">‹ Prev</button>
+              <span id="page-indicator" class="stat">Page 1 / 1</span>
+              <button type="button" class="btn btn--small" id="next-page" aria-label="Next page">Next ›</button>
+            </div>
+            <p class="field__hint wm-caption" id="preview-caption"></p>
+          </div>
+        </div>
+
+        <div class="progress" id="progress" hidden role="progressbar" aria-label="Stamping progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+        <div class="results" id="results" aria-live="polite"></div>
+        <!-- TOOL:END -->
+      </div>
+    </section>
+
+    <section class="container section" id="how" aria-labelledby="how-title">
+      <h2 id="how-title" class="section__title">How it works</h2>
+      <!-- HOW:START — three honest steps for this tool -->
+      <ol class="steps">
+        <li><strong>Open your PDF.</strong> Drop it on the page or choose it. Your browser reads it locally; nothing is uploaded.</li>
+        <li><strong>Set up the stamp.</strong> Type a text like CONFIDENTIAL or DRAFT, or pick a PNG or JPG logo. Choose opacity, angle, center or tiled, the layer and which pages to mark, and check the live preview.</li>
+        <li><strong>Apply and download.</strong> The stamp is drawn into the PDF on your device and saved as name_watermarked.pdf. The rest of the page content is left as it was.</li>
+      </ol>
+      <!-- HOW:END -->
+    </section>
+
+    <section class="container section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="section__title">Questions, answered</h2>
+      <!-- FAQ:START — 4 to 6 questions; keep the privacy, offline and AI answers -->
+      <details class="faq" open>
+        <summary>Are my files uploaded anywhere?</summary>
+        <p>No. PDF Watermark Stamper runs entirely in your browser. Your PDF and your logo are read into memory on your device, stamped with JavaScript, and never sent to a server. You can disconnect from the internet and it keeps working.</p>
+      </details>
+      <details class="faq">
+        <summary>Is it really free?</summary>
+        <p>Yes. It is open source under the MIT license, with no account, no daily limits, no paid tier for image stamps and no ads. If it saves you a paid subscription, you can say thanks on Ko-fi.</p>
+      </details>
+      <details class="faq">
+        <summary>Can I stamp text in Hebrew, Arabic, Chinese or with emoji?</summary>
+        <p>The built-in PDF fonts (Helvetica, Times, Courier) only cover Latin letters. When your text has other characters, the tool offers a button that draws the text into a transparent image with your system fonts and stamps that image instead, so every character shows up.</p>
+      </details>
+      <details class="faq">
+        <summary>What is the difference between over and under the content?</summary>
+        <p>Over puts the stamp on top of everything, so it is always visible. Under paints it first and lets the page draw over it, which keeps text easy to read. If a page has a solid white background (common in scanned PDFs), an under stamp is hidden by it, so use over for scans.</p>
+      </details>
+      <details class="faq">
+        <summary>Does it work offline?</summary>
+        <p>Yes. After your first visit the page is cached by a service worker, so it loads without a connection. You can also install it from your browser's menu as an app.</p>
+      </details>
+      <details class="faq">
+        <summary>Was this written by AI?</summary>
+        <p>Yes. PDF Watermark Stamper was generated by Claude Code from a written specification inside an automated pipeline, with a test suite that runs in a real browser. The full source is on GitHub, so you can read every line before you trust it with your files.</p>
+      </details>
+      <!-- FAQ:END -->
+    </section>
+
+    <section class="container section" id="support">
+      <div class="support-card">
+        <h2 class="section__title">Built by one person, given away for free</h2>
+        <p>PDF Watermark Stamper is a free alternative to paid tools like Smallpdf and iLovePDF Watermark PDF. If it earns a place in your bookmarks, a coffee keeps the updates coming.</p>
+        <a class="btn btn--kofi" href="https://ko-fi.com/leodavidai" rel="noopener">☕ Support Or on Ko-fi</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__links">
+        <a href="https://github.com/turhe123/pdf-watermark-stamper" rel="noopener">Source on GitHub</a> ·
+        <a href="https://github.com/turhe123/pdf-watermark-stamper/issues" rel="noopener">Report a bug</a> ·
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener">More free web tools</a> ·
+        <a href="https://ko-fi.com/leodavidai" rel="noopener">Ko-fi</a>
+      </p>
+      <p class="site-footer__disclosure"><strong>Built with AI.</strong> PDF Watermark Stamper was written by Claude Code inside an automated pipeline from a plain-English spec, as a clean-room implementation: no code or assets from any commercial product. It runs entirely in your browser, makes no network requests except an anonymous, cookieless page-view count, and has had less human review than hand-written software. Bug reports and pull requests are welcome.</p>
+      <p class="site-footer__copy">© 2026 Or Davidai Bachar · MIT License · <span id="sw-status" class="sw-status" aria-live="polite"></span></p>
+    </div>
+  </footer>
+
+  <script type="module" src="site.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
